@@ -247,7 +247,7 @@ jobs:
           # Adding comments (#) may be useful to easily tell the individual patches apart.
 
           curl https://github.com/paddingtonil/Loop/commits/dev/4939a8623de59a3523aac18d95bfb2a85bba7b09.patch | git apply --directory=Loop -v --whitespace=fix
-          curl https://github.com/paddingtonil/LoopKit/commits/dev/f42a33ba8b2f543b2e4d7abcac791a9912cb7e6a.patch | git apply --directory=Loop -v --whitespace=fix
+          curl https://github.com/paddingtonil/LoopKit/commits/dev/f42a33ba8b2f543b2e4d7abcac791a9912cb7e6a.patch | git apply --directory=LoopKit -v --whitespace=fix
           
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
