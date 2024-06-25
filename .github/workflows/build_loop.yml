@@ -233,11 +233,16 @@ jobs:
           # Template for customizing submodule Loop (changes Loop app name to "CustomLoop")
           # Remove the "#" sign from the beginning of the line below to activate:
           #curl https://github.com/loopnlearn/Loop/commit/d206432b024279ef710df462b20bd464cd9682d4.patch | git apply --directory=Loop -v --whitespace=fix
+
+          curl https://github.com/paddingtonil/Loop/commits/dev/4939a8623de59a3523aac18d95bfb2a85bba7b09.patch | git apply --directory=Loop -v --whitespace=fix
+
           
           # Submodule LoopKit patches:
           # General template for customizing submodule LoopKit 
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
           #curl url_to_github_commit.patch | git apply --directory=LoopKit -v --whitespace=fix
+
+          curl https://github.com/paddingtonil/LoopKit/commits/dev/f42a33ba8b2f543b2e4d7abcac791a9912cb7e6a.patch | git apply --directory=LoopKit -v --whitespace=fix
           
           # Submodule xxxxx patches:
 
@@ -246,8 +251,6 @@ jobs:
           # Several patches may be added per submodule.
           # Adding comments (#) may be useful to easily tell the individual patches apart.
 
-          curl https://github.com/paddingtonil/Loop/commits/dev/4939a8623de59a3523aac18d95bfb2a85bba7b09.patch | git apply --directory=Loop -v --whitespace=fix
-          curl https://github.com/paddingtonil/LoopKit/commits/dev/f42a33ba8b2f543b2e4d7abcac791a9912cb7e6a.patch | git apply --directory=LoopKit -v --whitespace=fix
           
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
