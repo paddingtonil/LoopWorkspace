@@ -4,7 +4,7 @@
 // MAIN_APP_BUNDLE_IDENTIFIER = com.myname.loop
 
 // Customize this to change the app name displayed
-MAIN_APP_DISPLAY_NAME = Loop-WEB
+MAIN_APP_DISPLAY_NAME = Loop
 
 // Customize this to change the URL to open Loop to something other than the display name
 //URL_SCHEME_NAME = $(MAIN_APP_DISPLAY_NAME)
