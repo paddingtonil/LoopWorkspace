@@ -232,6 +232,7 @@ jobs:
           # Submodule Loop patches:
           # Template for customizing submodule Loop (changes Loop app name to "CustomLoop")
           # Remove the "#" sign from the beginning of the line below to activate:
+          
           curl https://github.com/paddingtonil/Loop/commits/dev/4939a8623de59a3523aac18d95bfb2a85bba7b09.patch | git apply --directory=Loop -v --whitespace=fix
 
           
@@ -241,6 +242,9 @@ jobs:
           #curl url_to_github_commit.patch | git apply --directory=LoopKit -v --whitespace=fix
 
           curl https://github.com/paddingtonil/LoopKit/commits/dev/f42a33ba8b2f543b2e4d7abcac791a9912cb7e6a.patch | git apply --directory=LoopKit -v --whitespace=fix
+          curl https://github.com/paddingtonil/LoopKit/d379cb027bb258ab1970256302f90b74f617153f.patch | git apply --directory=LoopKit -v --whitespace=fix
+
+
           
           # Submodule xxxxx patches:
 
