@@ -233,7 +233,6 @@ jobs:
           # Template for customizing submodule Loop (changes Loop app name to "CustomLoop")
           # Remove the "#" sign from the beginning of the line below to activate:
 
-          curl https://github.com/paddingtonil/Loop/commit/8af84f169f37864ae3088bbee0a42147faac2b0a.patch | git apply --directory=Loop -v --whitespace=fix
 
             
           # Submodule LoopKit patches:
@@ -241,7 +240,6 @@ jobs:
           # Copy url from a GitHub commit or pull request and insert below, and remove the "#" sign from the beginning of the line to activate:
           #curl url_to_github_commit.patch | git apply --directory=LoopKit -v --whitespace=fix
 
-          curl https://github.com/paddingtonil/LoopKit/commit/d379cb027bb258ab1970256302f90b74f617153f.patch | git apply --directory=LoopKit -v --whitespace=fix
 
           # Submodule xxxxx patches:
 
@@ -264,6 +262,10 @@ jobs:
 
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line
+
+         curl https://github.com/paddingtonil/Loop/commit/8af84f169f37864ae3088bbee0a42147faac2b0a.patch | git apply --directory=Loop -v --whitespace=fix
+         curl https://github.com/paddingtonil/LoopKit/commit/d379cb027bb258ab1970256302f90b74f617153f.patch | git apply --directory=LoopKit -v --whitespace=fix
+
 
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
