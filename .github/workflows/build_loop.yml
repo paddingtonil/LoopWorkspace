@@ -258,12 +258,13 @@ jobs:
           meal_week \
           dexcom_upload_readings \
           now_line \
-          watch_title 
+          watch_title
+          
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line
 
           # curl https://github.com/paddingtonil/Loop/commit/8af84f169f37864ae3088bbee0a42147faac2b0a.patch | git apply --directory=Loop -v --whitespace=fix
-           curl https://github.com/paddingtonil/LoopKit/commit/d379cb027bb258ab1970256302f90b74f617153f.patch | git apply --directory=LoopKit -v --whitespace=fix
+          # curl https://github.com/paddingtonil/LoopKit/commit/d379cb027bb258ab1970256302f90b74f617153f.patch | git apply --directory=LoopKit -v --whitespace=fix
 
 
       # Patch Fastlane Match to not print tables
