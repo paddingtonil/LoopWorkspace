@@ -297,6 +297,9 @@ jobs:
 
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line
+
+          # Module: File: code customization description
+          curl https://github.com/paddingtonil/LoopKit/commit/e51a87d739f01f425903efa53acd5fb61b0c3980.patch | git apply -v --directory=LoopKit
           
 
       # Patch Fastlane Match to not print tables
