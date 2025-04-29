@@ -300,7 +300,9 @@ jobs:
 
           # Module: File: code customization description
           curl https://github.com/paddingtonil/LoopKit/commit/e51a87d739f01f425903efa53acd5fb61b0c3980.patch | git apply -v --directory=LoopKit
+          curl https://github.com/paddingtonil/LoopKit/commit/2fb0ec730b0fa028d58ba0c4c512033ab7bbb2a6.patch | git apply -v --directory=LoopKit
           curl https://github.com/paddingtonil/Loop/commit/970cb5643f1e1ca3b912c074d7e596fe8e0e3bc4.patch | git apply -v --directory=Loop
+          curl https://github.com/paddingtonil/Loop/commit/8b33e91d1381ce36f158832d0fd2fb212e55f347.patch | git apply -v --directory=Loop          
    
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
