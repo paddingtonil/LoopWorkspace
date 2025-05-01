@@ -299,6 +299,8 @@ jobs:
           # Module: File: momentum-slowdown, RowEmojiTextField
           curl https://github.com/paddingtonil/LoopKit/commit/4f4f8c996b977e895d4c5f57ea3d7bf70494e427.patch | git apply -v --directory=LoopKit
           curl https://github.com/paddingtonil/LoopKit/commit/0d94db6d8cc0619fe20b22beb0fe8cff33e6f9c0.patch | git apply -v --directory=LoopKit
+          curl https://github.com/paddingtonil/Loop/commit/c7bbd90df250ebe345db560bb5b6c0324f514307.patch | git apply -v --directory=Loop
+          curl https://github.com/paddingtonil/Loop/commit/205de8b72051c812b78884ecc8d2f69ce43658ea.patch | git apply -v --directory=Loop
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: |
