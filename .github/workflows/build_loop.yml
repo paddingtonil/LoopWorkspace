@@ -258,7 +258,7 @@ jobs:
           submodules: recursive
           ref: ${{ env.TARGET_BRANCH }}
 
-      # Customize Loop: Download and apply patches
+   # Customize Loop: Download and apply patches
       - name: Customize Loop
         run: |
 
