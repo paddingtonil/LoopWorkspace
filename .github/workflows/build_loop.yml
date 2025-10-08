@@ -298,9 +298,9 @@ jobs:
 
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line
-          https://github.com/paddingtonil/Loop/commits/822c662e07eb7d1a9e66e32b41638fad4c223d22.patch | git apply --directory=Loop -v --whitespace=fix
-          https://github.com/paddingtonil/LoopKit/commits/6693ea672e45065144b57dd71405142783d59613.patch | git apply --directory=LoopKit -v --whitespace=fix
-          https://github.com/paddingtonil/LoopKit/commits/57b7bb54af40a279fa6f79c5631b2b9a2397b898.patch | git apply --directory=LoopKit -v --whitespace=fix         
+          https://github.com/paddingtonil/Loop/commit/822c662e07eb7d1a9e66e32b41638fad4c223d22.patch | git apply -v --directory=Loop --whitespace=fix
+          https://github.com/paddingtonil/LoopKit/commit/6693ea672e45065144b57dd71405142783d59613.patch | git apply -v --directory=LoopKit --whitespace=fix
+          https://github.com/paddingtonil/LoopKit/commit/57b7bb54af40a279fa6f79c5631b2b9a2397b898.patch | git apply -v --directory=LoopKit --whitespace=fix         
           export SCRIPT_BRANCH=prelim_ai_food && export PATCH_BRANCH=prelim_ai_food && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/loopandlearn/lnl-scripts/$SCRIPT_BRANCH/CustomizationSelect.sh)" food_search
       
       # Patch Fastlane Match to not print tables
