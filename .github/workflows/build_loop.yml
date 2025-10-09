@@ -298,7 +298,8 @@ jobs:
 
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line
-          curl https://github.com/paddingtonil/Loop/commit/822c662e07eb7d1a9e66e32b41638fad4c223d22.patch | git apply -v --directory=Loop 
+          curl https://github.com/paddingtonil/Loop/commit/822c662e07eb7d1a9e66e32b41638fad4c223d22.patch | git apply -v --directory=Loop
+          curl https://github.com/paddingtonil/Loop/commit/ff78e53513da7700d7a0ba9bbda3a605f735da34.patch | git apply -v --directory=Loop
           curl https://github.com/paddingtonil/LoopKit/commit/6693ea672e45065144b57dd71405142783d59613.patch | git apply -v --directory=LoopKit 
           curl https://github.com/paddingtonil/LoopKit/commit/57b7bb54af40a279fa6f79c5631b2b9a2397b898.patch | git apply -v --directory=LoopKit        
           export SCRIPT_BRANCH=prelim_ai_food && export PATCH_BRANCH=prelim_ai_food && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/loopandlearn/lnl-scripts/$SCRIPT_BRANCH/CustomizationSelect.sh)" food_search
