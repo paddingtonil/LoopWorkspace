@@ -219,7 +219,7 @@ jobs:
           dexcom_upload_readings \
           watch_title \
           meal_week \
-          live_activity \
+          # live_activity \
           negative_insulin 
 
           # the final customization listed above CANNOT have a continuation character
