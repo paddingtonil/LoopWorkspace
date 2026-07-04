@@ -1,7 +1,11 @@
-name: 4. Build Loop Manual
-run-name: Build Loop Manual (${{ github.ref_name }})
+name: 4. Build Loop Auto 
+run-name: Build Loop Auto (${{ github.ref_name }})
 on:
   workflow_dispatch:
+  schedule:
+    # Check for updates every Sunday
+    #   Later logic builds if there are updates or if it is the 2nd Sunday of the month
+    - cron: "33 7 * * 0" # Sunday at UTC 7:33
 
 env:
   GH_PAT: ${{ secrets.GH_PAT }}
@@ -207,23 +211,6 @@ jobs:
           # Several patches may be added per submodule.
           # Adding comments (#) may be useful to easily tell the individual patches apart.
 
-          # The lines below add the customizations listed using the CustomizationSelect script
-          # The "\" is a continuation character 
-          #   the line following a "\" should not be blank
-          /bin/bash -c "$(curl -fsSL \
-          https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
-          watch_title \
-          meal_week \
-          negative_insulin 
-
-          # the final customization listed above CANNOT have a continuation character
-          # more customizations can be pasted after this line
-          curl https://github.com/paddingtonil/Loop/commit/822c662e07eb7d1a9e66e32b41638fad4c223d22.patch | git apply -v --directory=Loop
-          curl https://github.com/paddingtonil/Loop/commit/ff78e53513da7700d7a0ba9bbda3a605f735da34.patch | git apply -v --directory=Loop
-          curl https://github.com/paddingtonil/LoopKit/commit/6693ea672e45065144b57dd71405142783d59613.patch | git apply -v --directory=LoopKit 
-          curl https://github.com/paddingtonil/LoopKit/commit/57b7bb54af40a279fa6f79c5631b2b9a2397b898.patch | git apply -v --directory=LoopKit        
-          curl https://github.com/paddingtonil/LoopKit/commit/9e804f639f14ee75e80f7100acef8d184b13bd8b.patch | git apply -v --directory=LoopKit
-      
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: |
