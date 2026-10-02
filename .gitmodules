@@ -1,9 +1,11 @@
 [submodule "Loop"]
 	path = Loop
-	url = https://github.com/LoopKit/Loop.git
+	url = https://github.com/LoopPowerPack/Loop.git
+	branch = feat/AllFeatures
 [submodule "LoopKit"]
 	path = LoopKit
-	url = https://github.com/LoopKit/LoopKit.git
+	url = https://github.com/taylorpatterson-T1D/LoopKit.git
+	branch = feat/AllFeatures
 [submodule "CGMBLEKit"]
 	path = CGMBLEKit
 	url = https://github.com/LoopKit/CGMBLEKit.git
@@ -42,7 +44,8 @@
 	url = https://github.com/LoopKit/G7SensorKit.git
 [submodule "TidepoolService"]
 	path = TidepoolService
-	url = https://github.com/LoopKit/TidepoolService.git
+	url = https://github.com/LoopPowerPack/TidepoolService.git
+	branch = powerpack/pin-tidepoolkit-revision
 [submodule "MinimedKit"]
 	path = MinimedKit
 	url = https://github.com/LoopKit/MinimedKit.git
@@ -60,4 +63,5 @@
 	url = https://github.com/jbr7rr/MedtrumKit
 [submodule "EversenseKit"]
 	path = EversenseKit
-	url = https://github.com/bastiaanv/EversenseKit
+	url = https://github.com/LoopPowerPack/EversenseKit
+	branch = powerpack/loopplugin-infoplist-fix

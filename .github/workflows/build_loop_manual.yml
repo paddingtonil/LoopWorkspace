@@ -2,10 +2,14 @@ name: 4. Build Loop Manual
 run-name: Build Loop Manual (${{ github.ref_name }})
 on:
   workflow_dispatch:
+  # `schedule:` trigger removed. GitHub's fork-protection auto-disables
+  # scheduled workflows on forks and labels them "disabled_manually",
+  # which caused Build Loop to be disabled after every successful manual
+  # run. Users still trigger builds via the Run Workflow button.
 
 env:
   GH_PAT: ${{ secrets.GH_PAT }}
-  UPSTREAM_REPO: LoopKit/LoopWorkspace
+  UPSTREAM_REPO: LoopPowerPack/LoopWorkspace
   UPSTREAM_BRANCH: ${{ github.ref_name }} # branch on upstream repository to sync from (replace with specific branch name if needed)
   TARGET_BRANCH: ${{ github.ref_name }} # target branch on fork to be kept in sync
 

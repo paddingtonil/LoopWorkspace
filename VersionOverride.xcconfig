@@ -9,4 +9,4 @@
 // Version [for DIY Loop]
 //   configure the version number in LoopWorkspace
 LOOP_MARKETING_VERSION = 3.14.8
-CURRENT_PROJECT_VERSION = 57
+CURRENT_PROJECT_VERSION = 58

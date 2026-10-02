@@ -39,10 +39,18 @@ platform :ios do
       key_content: "#{FASTLANE_KEY}"
     )
 
-    previous_build_number = latest_testflight_build_number(
-      app_identifier: "com.#{TEAMID}.loopkit.Loop",
-      api_key: api_key,
-    )
+    # Gracefully handle first-ever build: app may not exist in App Store Connect yet
+    # (e.g. before the first manual TestFlight upload or if the API key lacks access).
+    # Defaults to build 0 so increment produces build number 1.
+    previous_build_number = begin
+      latest_testflight_build_number(
+        app_identifier: "com.#{TEAMID}.loopkit.Loop",
+        api_key: api_key,
+      )
+    rescue => e
+      UI.important("Could not fetch latest TestFlight build number (#{e.message.lines.first&.strip}). Defaulting to 0.")
+      0
+    end
 
     current_build_number = previous_build_number + 1
 
