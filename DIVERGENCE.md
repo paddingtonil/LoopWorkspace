@@ -110,14 +110,18 @@ docs live in `LoopWorkSpace/Loop/Documentation/<Feature>/`.
 
 | Feature | Adds | Default |
 |---|---|---|
-| **AutoPresets** | Auto-activate Loop override presets when CMPedometer/CMMotionActivity detect sustained walking or running. Optional geofence + calendar triggers | OFF |
+| **AutoPresets** | Auto-activate Loop override presets when CMPedometer/CMMotionActivity detect sustained walking or running. Optional geofence + calendar triggers, with in-app address/place search for geofences | OFF |
 | **BolusPro** | Per-meal toggle + slider on the Add Carb Entry screen that creates a second timed carb entry sized for the protein/fat tail (Trio's gram formula). Loop doses against both entries via its existing closed-loop logic — no second bolus, no algorithm changes | OFF |
-| **FoodFinder** | AI image analysis of food photos returning carbs/fat/protein/fiber/calories per item, optional barcode lookup via OpenFoodFacts, voice/text natural-language entry. BYO API key (OpenAI / Anthropic / Google) | OFF |
+| **DirectConnect** | PowerPack Exclusive. Loop pairs directly with Dexcom G7 / ONE+ / Stelo sensors using the applicator code — no Dexcom app. Calibration, 10/15-day detection, diagnostics, user-configurable glucose alarms (Urgent Low, Low, High, Rising/Falling Fast, Signal Loss, Sensor Expiring/Ended), automatic take-back from the Dexcom app, and Connection Health reliability counts. Core pairing and sensor communication based on xDrip4iOS by Johan Degraeve and contributors (GPL-3.0) | OFF |
+| **FoodFinder** | AI image analysis of food photos returning carbs/fat/protein/fiber/calories per item, optional barcode lookup via OpenFoodFacts (QR codes too, with a setting that prefers the regular barcode), voice/text natural-language entry. BYO API key (OpenAI / Anthropic / Google) | OFF |
 | **GraphDetailView** | Long-press the home-screen glucose chart to surface a detail popup with glucose / IOB / COB / bolus / basal rate / preset / AutoPreset / heart rate at the touched timestamp. Scrub left/right to explore | Always-on once installed |
 | **LoopInsights** | AI-powered analysis of glucose, insulin, and meal data with suggestions for therapy settings (CR / ISF / basal). Includes Behavior Insights, Caregiver Digest email/iMessage, Endo Visit PDF report generator, Meal Debrief retrospective, Pre-Meal Advisor, Ask Loopy chat, and **DataLayer** — a local SQLite event store with opt-in cloud upload for personal analytics dashboards (per-category consent: glucose, insulin, carbs, AI behavioral, biometrics, substances, activity/presets). BYO API key for AI features (shared with FoodFinder) | OFF |
 | **SiteAtlas** | Visual body-map tracker for pump infusion sets and CGM sensors. Color-coded age fade with type-aware safe-reuse windows (pump 10d, sensor 5d). Touch-and-drag pin adjustment with proximity warnings | OFF |
 
 Plus shared infrastructure:
+- AI model search buttons (OpenAI / Claude / Gemini / Grok) under the
+  Model field in FoodFinder, LoopInsights and AutoPresets settings
+  (`Loop/Views/PowerPack/`, `Loop/Services/PowerPack/`)
 - LoopKit fork (`taylorpatterson-T1D/LoopKit`) for any LoopKit-side
   integration that PowerPack needs
 - An installer (`feat/installer` branch on this repo) that overlays
