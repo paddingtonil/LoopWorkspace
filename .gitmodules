@@ -1,10 +1,10 @@
 [submodule "Loop"]
 	path = Loop
-	url = https://github.com/LoopPowerPack/Loop.git
+	url = https://github.com/paddingtonil/Loop.git
 	branch = feat/AllFeatures
 [submodule "LoopKit"]
 	path = LoopKit
-	url = https://github.com/taylorpatterson-T1D/LoopKit.git
+	url = https://github.com/paddingtonil/LoopKit.git
 	branch = feat/AllFeatures
 [submodule "CGMBLEKit"]
 	path = CGMBLEKit
