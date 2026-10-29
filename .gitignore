@@ -27,3 +27,6 @@ xcuserdata/
 *.playground
 playground.xcworkspace
 timeline.xctimeline
+
+# Local-only Claude Code guidance; keep out of the public repo
+CLAUDE.md
