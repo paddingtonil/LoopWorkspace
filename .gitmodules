@@ -61,9 +61,7 @@
 [submodule "EversenseKit"]
 	path = EversenseKit
 	url = https://github.com/bastiaanv/EversenseKit
-[submodule "dev-ai"]
-	path = FoodFinder
-	url = https://github.com/paddingtonil/dev-ai
-	branch = main
 [submodule "FoodFinder"]
+	path = FoodFinder
 	url = https://github.com/paddingtonil/FoodFinder.git
+	branch = main
